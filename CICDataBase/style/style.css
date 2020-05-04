@@ -1,0 +1,14 @@
+﻿#form_div{
+    position:absolute;
+    left:40%;
+    top:40%;
+    border:1px solid #000000;
+    padding:10px 10px;
+    width:auto;
+}
+td{
+    width:auto;
+}
+.field-validation-error{
+    color:red;
+}
