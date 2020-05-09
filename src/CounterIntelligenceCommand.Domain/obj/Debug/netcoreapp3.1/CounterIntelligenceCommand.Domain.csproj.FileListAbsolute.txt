@@ -1,0 +1,12 @@
+C:\Projects\db-project\src\CounterIntelligenceCommand.Domain\bin\Debug\netcoreapp3.1\CounterIntelligenceCommand.Domain.deps.json
+C:\Projects\db-project\src\CounterIntelligenceCommand.Domain\bin\Debug\netcoreapp3.1\CounterIntelligenceCommand.Domain.dll
+C:\Projects\db-project\src\CounterIntelligenceCommand.Domain\bin\Debug\netcoreapp3.1\CounterIntelligenceCommand.Domain.pdb
+C:\Projects\db-project\src\CounterIntelligenceCommand.Domain\bin\Debug\netcoreapp3.1\CounterIntelligenceCommand.Data.dll
+C:\Projects\db-project\src\CounterIntelligenceCommand.Domain\bin\Debug\netcoreapp3.1\CounterIntelligenceCommand.Data.pdb
+C:\Projects\db-project\src\CounterIntelligenceCommand.Domain\obj\Debug\netcoreapp3.1\CounterIntelligenceCommand.Domain.csprojAssemblyReference.cache
+C:\Projects\db-project\src\CounterIntelligenceCommand.Domain\obj\Debug\netcoreapp3.1\CounterIntelligenceCommand.Domain.csproj.CoreCompileInputs.cache
+C:\Projects\db-project\src\CounterIntelligenceCommand.Domain\obj\Debug\netcoreapp3.1\CounterIntelligenceCommand.Domain.AssemblyInfoInputs.cache
+C:\Projects\db-project\src\CounterIntelligenceCommand.Domain\obj\Debug\netcoreapp3.1\CounterIntelligenceCommand.Domain.AssemblyInfo.cs
+C:\Projects\db-project\src\CounterIntelligenceCommand.Domain\obj\Debug\netcoreapp3.1\CounterIntelligenceCommand.Domain.csproj.CopyComplete
+C:\Projects\db-project\src\CounterIntelligenceCommand.Domain\obj\Debug\netcoreapp3.1\CounterIntelligenceCommand.Domain.dll
+C:\Projects\db-project\src\CounterIntelligenceCommand.Domain\obj\Debug\netcoreapp3.1\CounterIntelligenceCommand.Domain.pdb

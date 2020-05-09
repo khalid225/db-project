@@ -1,0 +1,12 @@
+C:\Projects\db-project\src\CounterIntelligenceCommand.Data\bin\Debug\netcoreapp3.1\CounterIntelligenceCommand.Data.deps.json
+C:\Projects\db-project\src\CounterIntelligenceCommand.Data\bin\Debug\netcoreapp3.1\CounterIntelligenceCommand.Data.dll
+C:\Projects\db-project\src\CounterIntelligenceCommand.Data\obj\Debug\netcoreapp3.1\CounterIntelligenceCommand.Data.AssemblyInfoInputs.cache
+C:\Projects\db-project\src\CounterIntelligenceCommand.Data\obj\Debug\netcoreapp3.1\CounterIntelligenceCommand.Data.AssemblyInfo.cs
+C:\Projects\db-project\src\CounterIntelligenceCommand.Data\obj\Debug\netcoreapp3.1\CounterIntelligenceCommand.Data.csprojAssemblyReference.cache
+C:\Projects\db-project\src\CounterIntelligenceCommand.Data\bin\Debug\netcoreapp3.1\CounterIntelligenceCommand.Data.pdb
+C:\Projects\db-project\src\CounterIntelligenceCommand.Data\obj\Debug\netcoreapp3.1\CounterIntelligenceCommand.Data.dll
+C:\Projects\db-project\src\CounterIntelligenceCommand.Data\obj\Debug\netcoreapp3.1\CounterIntelligenceCommand.Data.pdb
+C:\Projects\db-project\src\CounterIntelligenceCommand.Data\bin\Debug\netcoreapp3.1\CounterIntelligenceCommand.Data.runtimeconfig.json
+C:\Projects\db-project\src\CounterIntelligenceCommand.Data\bin\Debug\netcoreapp3.1\CounterIntelligenceCommand.Data.runtimeconfig.dev.json
+C:\Projects\db-project\src\CounterIntelligenceCommand.Data\obj\Debug\netcoreapp3.1\CounterIntelligenceCommand.Data.csproj.CoreCompileInputs.cache
+C:\Projects\db-project\src\CounterIntelligenceCommand.Data\obj\Debug\netcoreapp3.1\CounterIntelligenceCommand.Data.genruntimeconfig.cache
