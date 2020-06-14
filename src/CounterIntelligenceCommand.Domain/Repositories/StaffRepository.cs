@@ -11,5 +11,7 @@ namespace CounterIntelligenceCommand.Domain.Repositories
         {
             _dbContext = dbContext;
         }
+
+
     }
 }

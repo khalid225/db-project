@@ -66,7 +66,6 @@ namespace CounterIntelligenceCommand.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(250)")
                         .HasMaxLength(250);
 

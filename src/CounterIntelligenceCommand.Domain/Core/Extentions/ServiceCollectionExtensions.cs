@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using CounterIntelligenceCommand.Data.Entities;
 using CounterIntelligenceCommand.Domain.Repositories;
+using CounterIntelligenceCommand.Domain.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,7 +21,15 @@ namespace CounterIntelligenceCommand.Domain.Core
 
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
-            services.AddScoped<IStaffRepository, StaffRepository>();
+            services.AddScoped<IStaffRepository, StaffRepository>()
+                .AddScoped<IStateRepository, StateRepository>();
+            return services;
+        }
+
+        public static IServiceCollection AddServices(this IServiceCollection services)
+        {
+            services.AddScoped<IStaffService, StaffService>()
+                .AddScoped<IStateService, StateService>();
             return services;
         }
     }

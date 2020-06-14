@@ -1,0 +1,81 @@
+﻿@model PaginatedList<StaffModel>
+@{
+    ViewData["Title"] = "Staff";
+    var currentPage = ViewBag.Page;
+    var limit = ViewBag.Limit;
+    var index = (limit * (currentPage - 1)) + 1;
+}
+
+<!-- Hero -->
+<div class="bg-body-light">
+    <div class="content content-full">
+        <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
+            <h1 class="flex-sm-fill h3 my-2">
+                Staff List <small class="d-block d-sm-inline-block mt-2 mt-sm-0 font-size-base font-w400 text-muted">The table below contains list of staff successfully added to the system.</small>
+            </h1>
+            <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-alt">
+                    <li class="breadcrumb-item">Staff</li>
+                    <li class="breadcrumb-item" aria-current="page">
+                        <a class="link-fx" asp-controller="staff" asp-action="index">All</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- END Hero -->
+
+<div class="content">
+    <div class="block">
+        <div class="block-header">
+            <h3 class="block-title">All Staff</h3>
+        </div>
+        <div class="block-content block-content-full">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover table-vcenter">
+                    <thead>
+                        <tr>
+                            <th class="text-center">S/N</th>
+                            <th>FirstName</th>
+                            <th>LastName</th>
+                            <th>ArmyNumber</th>
+                            <th>Rank</th>
+                            <th>State</th>
+                            <th>Birth Date</th>
+                            <th>Retirement Date</th>
+                            <th class="text-center" style="width: 100px;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Rows)
+                        {
+                            <tr>
+                                <td class="text-center">@index</td>
+                                <td class="font-w600 font-size-sm">@item.FirstName</td>
+                                <td class="font-size-sm">@item.LastName</td>
+                                <td>@item.ArmyNumber</td>
+                                <td>@item.Rank</td>
+                                <td>@item.State</td>
+                                <td>@item.BirthDate.ToString("dd-MM-yyyy")</td>
+                                <td>@item.RetirementDate.ToString("dd-MM-yyyy")</td>
+                                <td class="text-center">
+                                    <div class="btn-group">
+                                        <a asp-action="edit" asp-controller="staff" asp-route-id="@item.Id" class="btn btn-sm btn-primary" data-toggle="tooltip" title="Edit">
+                                            <i class="fa fa-fw fa-pencil-alt"></i>
+                                        </a>
+                                        <a asp-action="delete" asp-controller="staff" asp-route-id="@item.Id" class="btn btn-sm btn-warning" data-toggle="tooltip" title="Delete">
+                                            <i class="fa fa-fw fa-times"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            index++;
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <partial name="_PaginationPartial" model="@(new PaginationModel{PageSize = limit, Route="staffList", Count = Model.TotalCount, CurrentPage = currentPage})"/>
+        </div>
+    </div>
+</div>

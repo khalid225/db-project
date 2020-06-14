@@ -25,8 +25,9 @@ namespace CounterIntelligenceCommand.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDatabase(Configuration.GetConnectionString("CounterIntelligenceCommand"));
-            services.AddRepositories();
+            services.AddDatabase(Configuration.GetConnectionString("CounterIntelligenceCommand"))
+                .AddRepositories()
+                .AddServices();
             services.AddControllersWithViews();
         }
 

@@ -17,6 +17,8 @@ namespace CounterIntelligenceCommand.Domain.Repositories
 
         Task<bool> ExistsAsync(int id);
 
+        public Task<bool> ExistsAsync(Expression<Func<T, bool>> expression);
+
         IQueryable<T> Query();
 
         Task<T> InsertAsync(T entity);

@@ -1,0 +1,117 @@
+﻿@model StaffViewModel
+
+@{
+    ViewData["Title"] = "Edit Staff";
+    var alert = !string.IsNullOrEmpty(ViewBag.Message);
+    var alertClass = alert  && ViewBag.Error? "alert alert-danger alert-dismissable": "alert alert-success alert-dismissable";
+    var message = ViewBag.Message;
+}
+
+<!-- Hero -->
+<div class="bg-body-light">
+    <div class="content content-full">
+        <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
+            <h1 class="flex-sm-fill h3 my-2">
+                Edit Staff <small class="d-block d-sm-inline-block mt-2 mt-sm-0 font-size-base font-w400 text-muted">Kindly fill the form below and click submit to update the staff record.</small>
+            </h1>
+            <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-alt">
+                    <li class="breadcrumb-item">Staff</li>
+                    <li class="breadcrumb-item" aria-current="page">
+                        <a class="link-fx" asp-controller="staff" asp-action="create">Edit</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- END Hero -->
+
+<div class="content">
+    <div class="block">
+        <div class="block-header">
+            <h3 class="block-title">Edit @Model.FirstName @Model.LastName</h3>
+        </div>
+        <div class="block-content block-content-full">
+            <form asp-controller="staff" asp-action="edit" asp-route-id="@Model.Id">
+
+                @if (alert)
+                {
+                    <div class="@alertClass" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <p class="mb-0">@message</p>
+                    </div>
+                }
+
+                <div class="row">
+                    <div class="col-lg-6 col-xl-6 col-md-6">
+                        <div class="form-group">
+                            <label asp-for="FirstName">First Name</label>
+                            <input type="text" class="form-control" required="" asp-for="FirstName">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="MiddleName">Middle Name</label>
+                            <input type="text" class="form-control" asp-for="MiddleName">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PhoneNumber">Phone</label>
+                            <input type="text" class="form-control" asp-for="PhoneNumber">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="BirthDate">Date of Birth</label>
+                            <input type="text" class="js-datepicker form-control" asp-for="BirthDate" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm-dd-yyyy" placeholder="mm-dd-yyyy">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Rank">Rank</label>
+                            <select class="form-control" asp-for="Rank" asp-items="ViewBag.Ranks">
+                                <option value="">Select a rank</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-6 col-md-6">
+                        <div class="form-group">
+                            <label asp-for="LastName">Last Name</label>
+                            <input type="text" class="form-control" required="" asp-for="LastName">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ArmyNumber">Army Number</label>
+                            <input type="text" class="form-control" required="" asp-for="ArmyNumber">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Address">Address</label>
+                            <input type="text" class="form-control" asp-for="Address">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="RetirementDate">Retirement Date</label>
+                            <input class="js-datepicker form-control" type="text" asp-for="RetirementDate" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="mm-dd-yyyy" placeholder="mm-dd-yyyy">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="State">State</label>
+                            <select class="form-control" asp-for="State" asp-items="ViewBag.States">
+                                <option value="">Select a state</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary"> Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section styles
+{
+    <link rel="stylesheet" href="~/assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+}
+
+@section scripts
+{
+    <script src="~/assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script>jQuery(function () { One.helpers(['datepicker']); });</script>
+
+}

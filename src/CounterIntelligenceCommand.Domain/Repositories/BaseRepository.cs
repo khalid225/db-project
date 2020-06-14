@@ -33,6 +33,11 @@ namespace CounterIntelligenceCommand.Domain.Repositories
             _dbContext.Set<T>()
                       .AnyAsync(e => e.Id == id);
 
+        public Task<bool> ExistsAsync(Expression<Func<T, bool>> expression) =>
+           _dbContext.Set<T>()
+                     .AnyAsync(expression);
+
+
 
 
         public IQueryable<T> Query() =>
@@ -55,7 +60,6 @@ namespace CounterIntelligenceCommand.Domain.Repositories
         public async Task<T> InsertAsync(T entity)
         {
             entity.DateCreated = DateTime.UtcNow;
-
             await _dbContext.Set<T>()
                             .AddAsync(entity);
 

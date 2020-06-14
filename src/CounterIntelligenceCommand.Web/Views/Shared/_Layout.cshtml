@@ -1,48 +1,65 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - CounterIntelligenceCommand.Web</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>@ViewData["Title"] - CIC</title>
+
+    <meta name="description" content="OneUI - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta name="author" content="khalid">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="CIC - CounterIntelligenceCommand">
+    <meta property="og:site_name" content="CounterIntelligenceCommand">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="~/assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+    <!-- Stylesheets -->
+    <!-- Fonts and OneUI framework -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
+    <link rel="stylesheet" id="css-main" href="~/assets/css/oneui.min.css">
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/amethyst.min.css"> -->
+    <!-- END Stylesheets -->
+    @await RenderSectionAsync("styles", required: false)
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CounterIntelligenceCommand.Web</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed">
+
+        @*<partial name="_AsidePartial" />*@
+
+        <partial name="_NavBarPartial" />
+
+        <partial name="_HeaderPartial" />
+
+        <!-- Main Container -->
+        <main id="main-container">
             @RenderBody()
         </main>
+        <!-- END Main Container -->
+
+        <partial name="_FooterPartial" />
+
+        <partial name="_ModalPartial" />
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - CounterIntelligenceCommand.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+    <script src="~/assets/js/oneui.core.min.js"></script>
+    <script src="~/assets/js/oneui.app.min.js"></script>
+
+    <!-- Page JS Plugins -->
+    <script src="~/assets/js/plugins/chart.js/Chart.bundle.min.js"></script>
+
+    <!-- Page JS Code -->
+    <script src="~/assets/js/pages/be_pages_dashboard.min.js"></script>
+@await RenderSectionAsync("scripts", required: false)
 </body>
 </html>

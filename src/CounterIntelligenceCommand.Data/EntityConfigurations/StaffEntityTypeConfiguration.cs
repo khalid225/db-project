@@ -28,8 +28,7 @@ namespace CounterIntelligenceCommand.Data.EntityConfigurations
                 .HasMaxLength(250);
 
             builder.Property(s => s.PhoneNumber)
-                .HasMaxLength(250)
-                .IsRequired();
+                .HasMaxLength(250);
 
             builder.HasIndex(s => s.ArmyNumber)
                 .IsUnique();

@@ -26,8 +26,22 @@ using CounterIntelligenceCommand.Web.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Projects\db-project\src\CounterIntelligenceCommand.Web\Views\_ViewImports.cshtml"
+using CounterIntelligenceCommand.Domain.Core.Paging;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Projects\db-project\src\CounterIntelligenceCommand.Web\Views\_ViewImports.cshtml"
+using CounterIntelligenceCommand.Domain.Core;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d6a5625cc8fb4476f348b0fe9041c550465d8bf9", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e11dfdf4eb31ce83ea6552fcdb2d0a31c43b788f", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"321f145d71287560cd1c8e8ca83e028f7e7af6fa", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998
